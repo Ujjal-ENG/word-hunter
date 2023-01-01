@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import Container from "@mui/material/Container";
+import Header from "./components/Header/Header";
 
 function App() {
   const [meanings, setMeanings] = useState([]);
@@ -23,19 +24,11 @@ function App() {
   }, []);
 
   return (
-    <div
-      className="App"
-      style={{
-        height: "100vh",
-        backgroundColor: "#282c34",
-        color: "#fff",
-      }}
-    >
+    <div className="App">
       <Container
         maxWidth="md"
-        style={{ display: "flex", flexDirection: "column", height: "100vh" }}
       >
-        <h1>Dictornary</h1>
+        <Header />
       </Container>
     </div>
   );
